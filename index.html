@@ -85,9 +85,9 @@
 			<li>The software is provided "as is", without warranty of any kind, express or implied.</li>
 		</ul>
 
-		<p>For more details, you can read the full text of the MIT License <a href="LICENSE.html">here</a>.</p>
+        <h2><a href="https://github.com/IAMVanilka/SaveMeApp.git">GitHub Repository</a></h2>
+		<p id="git-hub-text">Visit official <a href="https://github.com/IAMVanilka/SaveMeApp">GitHub repository</a> to contribute or view the source code of the project.</p>
 
-        <p id="contact-text">If you have any questions or suggestions, please feel free to contact us!</p>
     </main>
     <footer>
         <p>&copy; 2024 SaveMeApp. All rights reserved.</p>
@@ -106,7 +106,7 @@
                 termsText: "Наши Условия обслуживания описывают правила и условия, на которых вы можете использовать наше приложение. Пожалуйста, внимательно ознакомьтесь с ними.",
                 licenseLink: "MIT Лицензия",
                 licenseText: "MIT Лицензия является разрешительной лицензией на свободное программное обеспечение, которая позволяет свободно использовать, копировать, изменять, объединять, публиковать, распространять, предоставлять лицензии и/или продавать копии программного обеспечения.",
-                contactText: "Если у вас есть вопросы или предложения, пожалуйста, не стесняйтесь связаться с нами!"
+				github: "Посетите репозиторий на GitHub."
             },
             en: {
                 title: "SaveMeApp",
@@ -119,7 +119,8 @@
                 termsText: "Our Terms of Service outline the rules and conditions under which you can use our application. Please read them carefully.",
                 licenseLink: "MIT License",
                 licenseText: "The MIT License is a permissive free software license that allows software to be freely used, copied, modified, merged, published, distributed, sublicensed, and sold.",
-                contactText: "If you have any questions or suggestions, please feel free to contact us!"
+				github: "Visit official GitHub repository to contribute or view the source code of the project."
+				
             }
         };
 
@@ -134,7 +135,7 @@
             document.getElementById('terms-text').innerText = texts[lang].termsText;
             document.getElementById('license-link').innerText = texts[lang].licenseLink;
             document.getElementById('license-text').innerText = texts[lang].licenseText;
-            document.getElementById('contact-text').innerText = texts[lang].contactText;
+			document.getElementById('git-hub-text').innerText = texts[lang].github;
         }
 
         // Установка языка по умолчанию на английский
