@@ -3,10 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaveMeApp</title>
+    <title>SaveMeApp - Privacy Policy and Terms of Service</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #007BFF;
+            margin-top: 20px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f9;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .language-selector {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to SaveMeApp!</h1>
-    <p>This is a simple site.</p>
+    <header>
+        <h1 id="app-title">SaveMeApp</h1>
+        <p id="app-description">Your reliable assistant in saving game progress</p>
+        <div class="language-selector">
+            <button onclick="setLanguage('ru')">Русский</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+    </header>
+    <main>
+        <h2 id="welcome-title">Welcome!</h2>
+        <p id="welcome-text">Thank you for using our application! We strive to ensure your safety and protect your data. Please review our Privacy Policy and Terms of Service.</p>
+        
+        <h2><a href="Google Privacy Policy.html" id="privacy-link">Privacy Policy</a></h2>
+        <p id="privacy-text">Our Privacy Policy details what information we collect, how we use it, and how we protect your data.</p>
+
+        <h2><a href="Terms of Service.html" id="terms-link">Terms of Service</a></h2>
+        <p id="terms-text">Our Terms of Service outline the rules and conditions under which you can use our application. Please read them carefully.</p>
+		
+		<h2><a href="LICENSE.html" id="license-link">MIT License</a></h2>
+		<p id="license-text">The MIT License is a permissive free software license that allows software to be freely used, copied, modified, merged, published, distributed, sublicensed, and sold. It is a simple and easy-to-understand license that places very few restrictions on reuse, making it a popular choice for open source projects.</p>
+
+		<p>This license includes the following key conditions:</p>
+		<ul>
+			<li>The copyright notice and permission notice must be included in all copies or substantial portions of the Software.</li>
+			<li>The software is provided "as is", without warranty of any kind, express or implied.</li>
+		</ul>
+
+		<p>For more details, you can read the full text of the MIT License <a href="LICENSE.html">here</a>.</p>
+
+        <p id="contact-text">If you have any questions or suggestions, please feel free to contact us!</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 SaveMeApp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const texts = {
+            ru: {
+                title: "SaveMeApp",
+                description: "Ваш надежный помощник в сохранении игровых прогрессов",
+                welcome: "Добро пожаловать!",
+                welcomeText: "Спасибо за использование нашего приложения! Мы стремимся обеспечить вашу безопасность и защиту ваших данных. Пожалуйста, ознакомьтесь с нашей политикой конфиденциальности и условиями обслуживания.",
+                privacyLink: "Политика конфиденциальности",
+                privacyText: "Наша Политика конфиденциальности подробно описывает, какую информацию мы собираем, как мы ее используем и как мы защищаем ваши данные.",
+                termsLink: "Условия обслуживания",
+                termsText: "Наши Условия обслуживания описывают правила и условия, на которых вы можете использовать наше приложение. Пожалуйста, внимательно ознакомьтесь с ними.",
+                licenseLink: "MIT Лицензия",
+                licenseText: "MIT Лицензия является разрешительной лицензией на свободное программное обеспечение, которая позволяет свободно использовать, копировать, изменять, объединять, публиковать, распространять, предоставлять лицензии и/или продавать копии программного обеспечения.",
+                contactText: "Если у вас есть вопросы или предложения, пожалуйста, не стесняйтесь связаться с нами!"
+            },
+            en: {
+                title: "SaveMeApp",
+                description: "Your reliable assistant in saving game progress",
+                welcome: "Welcome!",
+                welcomeText: "Thank you for using our application! We strive to ensure your safety and protect your data. Please review our Privacy Policy and Terms of Service.",
+                privacyLink: "Privacy Policy",
+                privacyText: "Our Privacy Policy details what information we collect, how we use it, and how we protect your data.",
+                termsLink: "Terms of Service",
+                termsText: "Our Terms of Service outline the rules and conditions under which you can use our application. Please read them carefully.",
+                licenseLink: "MIT License",
+                licenseText: "The MIT License is a permissive free software license that allows software to be freely used, copied, modified, merged, published, distributed, sublicensed, and sold.",
+                contactText: "If you have any questions or suggestions, please feel free to contact us!"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('app-title').innerText = texts[lang].title;
+            document.getElementById('app-description').innerText = texts[lang].description;
+            document.getElementById('welcome-title').innerText = texts[lang].welcome;
+            document.getElementById('welcome-text').innerText = texts[lang].welcomeText;
+            document.getElementById('privacy-link').innerText = texts[lang].privacyLink;
+            document.getElementById('privacy-text').innerText = texts[lang].privacyText;
+            document.getElementById('terms-link').innerText = texts[lang].termsLink;
+            document.getElementById('terms-text').innerText = texts[lang].termsText;
+            document.getElementById('license-link').innerText = texts[lang].licenseLink;
+            document.getElementById('license-text').innerText = texts[lang].licenseText;
+            document.getElementById('contact-text').innerText = texts[lang].contactText;
+        }
+
+        // Установка языка по умолчанию на английский
+        setLanguage('en');
+    </script>
 </body>
 </html>
